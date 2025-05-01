@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Mentor | Browser extensions manager UI</title>
+    <link rel="stylesheet" href="Styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body class="body">
+    <nav>
+      <img src="./assets/images/logo.svg" alt="" />
+      <button class="mood"><img src="moon.png" alt="" /></button>
+    </nav>
+    <header>
+      <h1 class="exten">Extention List</h1>
+      <div class="buttons">
+        <button class="all button">All</button>
+        <button class="active button">Active</button>
+        <button class="inactive button">Inactive</button>
+      </div>
+    </header>
+    <div class="extensions-grid">
+      <div class="devLens extension-card card">
+        <div class="info">
+          <div class="card-content">
+            <img src="./assets/images/logo-devlens.svg" alt="" />
+            <div class="text-content">
+              <h5 class="DevLens">DevLens</h5>
+              <p>
+                Quickly inspect page layouts and visualize element boundaries.
+              </p>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-6">
+                <button class="remove">Remove</button>
+              </div>
+              <div class="col-6">
+                <label class="switch">
+                  <input type="checkbox" checked />
+                  <div class="slider round"></div>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="styleSpy extension-card card">
+        <div class="info">
+          <div class="card-content">
+            <img src="./assets/images/logo-style-spy.svg" alt="" />
+            <div class="text-content">
+              <h5>StyleSpy</h5>
+              <p>Instantly analyze and copy CSS from any webpage element.</p>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-6">
+                <button class="remove">Remove</button>
+              </div>
+              <div class="col-6">
+                <label class="switch">
+                  <input type="checkbox" checked />
+                  <div class="slider round"></div>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="speedBoost extension-card card">
+        <div class="info">
+          <div class="card-content">
+            <img src="./assets/images/logo-speed-boost.svg" alt="" />
+            <div class="text-content">
+              <h5>SpeedBoost</h5>
+              <p>
+                Optimizes browser resource usage to accelerate page loading.
+              </p>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-6">
+                <button class="remove">Remove</button>
+              </div>
+              <div class="col-6">
+                <label class="switch">
+                  <input type="checkbox" checked />
+                  <div class="slider round"></div>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="jsonWizard extension-card card">
+        <div class="info">
+          <div class="card-content">
+            <img src="./assets/images/logo-json-wizard.svg" alt="" />
+            <div class="text-content">
+              <h5>JSONWizard</h5>
+              <p>
+                Formats, validates, and prettifies JSON responses in browser.
+              </p>
+            </div>
+          </div>
+
+          <div class="container">
+            <div class="row">
+              <div class="col-6">
+                <button class="remove">Remove</button>
+              </div>
+              <div class="col-6">
+                <label class="switch">
+                  <input type="checkbox" checked />
+                  <div class="slider round"></div>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tabMasterPro extension-card card">
+        <div class="info">
+          <div class="card-content">
+            <img src="./assets/images/logo-tab-master-pro.svg" alt="" />
+            <div class="text-content">
+              <h5>TabMaster Pro</h5>
+              <p>Organizes browser tabs into groups and sessions.</p>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-6">
+                <button class="remove">Remove</button>
+              </div>
+              <div class="col-6">
+                <label class="switch">
+                  <input type="checkbox" checked />
+                  <div class="slider round"></div>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="viewportBuddy extension-card card">
+        <div class="info">
+          <div class="card-content">
+            <img src="./assets/images/logo-viewport-buddy.svg" alt="" />
+            <div class="text-content">
+              <h5>ViewportBuddy</h5>
+              <p>
+                Simulates various screen resolutions directly within the
+                browser.
+              </p>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-6">
+                <button class="remove">Remove</button>
+              </div>
+              <div class="col-6">
+                <label class="switch">
+                  <input type="checkbox" checked />
+                  <div class="slider round"></div>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="markupNotes extension-card card">
+        <div class="info">
+          <div class="card-content markPic">
+            <img src="./assets/images/logo-markup-notes.svg" alt="" />
+            <div class="text-content">
+              <h5>Markup Notes</h5>
+              <p>
+                Enables annnotation and notes directly onto webpages for
+                collaborative debugging.
+              </p>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-6">
+                <button class="remove">Remove</button>
+              </div>
+              <div class="col-6">
+                <label class="switch">
+                  <input type="checkbox" checked />
+                  <div class="slider round"></div>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="gridGuides extension-card card">
+        <div class="info">
+          <div class="card-content gridPic">
+            <img src="./assets/images/logo-grid-guides.svg" alt="" />
+            <div class="text-content">
+              <h5>GridGuides</h5>
+              <p>
+                Overalay customizable grids and alignment guides on any webpage.
+              </p>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-6">
+                <button class="remove">Remove</button>
+              </div>
+              <div class="col-6">
+                <label class="switch">
+                  <input type="checkbox" checked />
+                  <div class="slider round"></div>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="palettePicker extension-card card">
+        <div class="info">
+          <div class="card-content">
+            <img src="./assets/images/logo-palette-picker.svg" alt="" />
+            <div class="text-content">
+              <h5>Palette Picker</h5>
+              <p>Instantly extracts color palettes from any webpage.</p>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-6">
+                <button class="remove">Remove</button>
+              </div>
+              <div class="col-6">
+                <label class="switch">
+                  <input type="checkbox" checked />
+                  <div class="slider round"></div>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="linkChecker extension-card card">
+        <div class="info">
+          <div class="card-content">
+            <img src="./assets/images/logo-link-checker.svg" alt="" />
+            <div class="text-content">
+              <h5>LinkChecker</h5>
+              <p>Scans and highlights broken links on any page.</p>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-6">
+                <button class="remove">Remove</button>
+              </div>
+              <div class="col-6">
+                <label class="switch">
+                  <input type="checkbox" checked />
+                  <div class="slider round"></div>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="domSnapshot extension-card card">
+        <div class="info">
+          <div class="card-content">
+            <img src="./assets/images/logo-dom-snapshot.svg" alt="" />
+            <div class="text-content">
+              <h5>DOM Snapshot</h5>
+              <p>Capture and export DOM structures quickly.</p>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-6">
+                <button class="remove">Remove</button>
+              </div>
+              <div class="col-6">
+                <label class="switch">
+                  <input type="checkbox" checked />
+                  <div class="slider round"></div>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="consolePlus extension-card card">
+        <div class="info">
+          <div class="card-content">
+            <img src="./assets/images/logo-console-plus.svg" alt="" />
+            <div class="text-content">
+              <h5>ConsolePlus</h5>
+              <p>
+                Enhanced developer console with advanced filtering and logging.
+              </p>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-6">
+                <button class="remove">Remove</button>
+              </div>
+              <div class="col-6">
+                <label class="switch">
+                  <input type="checkbox" checked />
+                  <div class="slider round"></div>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"
+    ></script>
+    <script src="indes.js"></script>
+  </body>
+</html>

@@ -1,0 +1,246 @@
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 24px;
+  margin-left: 70%;
+}
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: hsl(3, 77%, 44%);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px hsl(3, 77%, 44%);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(16px);
+  -ms-transform: translateX(16px);
+  transform: translateX(16px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 24px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.body {
+  background: linear-gradient(180deg, #ebf2fc 0%, #eef8f9 100%);
+}
+
+/*navbar*/
+nav {
+  background-color: #ffff;
+  margin: 1% 10%;
+  padding: 1%;
+  border-radius: 20px;
+  display: flex; /* Use Flexbox to align items */
+  justify-content: space-between;
+  align-items: center; /* Vertically center items */
+}
+.mood {
+  margin-left: auto; /* Push button to the right */
+  font-size: 0.9rem; /* Compact button */
+  padding: 6px 12px; /* Small padding */
+  background-color: hsl(217, 61%, 90%); /* Button background */
+  color: white; /* Moon emoji and text color */
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  flex-shrink: 0; /* Prevent button from shrinking */
+}
+.mood:hover {
+  background-color: #ccc;
+}
+.mood img {
+  max-width: 20px;
+  max-height: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 8px;
+  font-size: larger;
+  font-weight: bolder;
+  color: hsl(226, 25%, 17%);
+}
+
+h1 {
+  text-align: center;
+}
+
+.buttons {
+  display: flex; /* Use Flexbox to place buttons in one line */
+  gap: 8px; /* 8px margin between buttons */
+  justify-content: center; /* Center buttons horizontally */
+  flex-wrap: nowrap; /* Prevent buttons from wrapping to the next line */
+  margin-bottom: 8px;
+}
+.button {
+  font-size: 0.9rem; /* Compact button text */
+  padding: 8px 16px; /* Comfortable padding */
+  border: none;
+  background-color: white; /* Blue background for buttons */
+  color: black;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 18px;
+}
+.button:hover {
+  border: 1px solid hsl(3, 77%, 44%); /* Darker blue on hover */
+  color: white;
+}
+
+/* Card styles */
+
+.remove {
+  border: 2px solid hsl(0, 0%, 78%);
+  border-radius: 25px;
+}
+.remove:hover {
+  border: 2px solid hsl(3, 77%, 44%);
+}
+.extensions-grid {
+  display: grid;
+  place-items: center;
+}
+.extension-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  margin-bottom: 8px;
+  max-width: 50%;
+}
+.card-content {
+  display: flex;
+  align-items: center; /* Align items in a row */
+  gap: 10px; /* Space between image and text */
+  margin: 0;
+}
+.text-content {
+  display: flex;
+  flex-direction: column; /* Stack h5 and p vertically */
+}
+.card-content img {
+  margin-bottom: 18%;
+}
+/*{
+  margin: 0;
+  margin-bottom: 5%;
+  font-size: 1.2em;
+}*/
+.text-content h5 {
+  font-size: 1.2em;
+}
+
+.text-content p {
+  margin: 0; /* Remove default margins */
+  font-size: 0.9em; /* Adjust size as needed */
+  margin-bottom: 10%;
+}
+@media screen and (min-width: 800px) {
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 0 10%; /* Match nav margin for consistency */
+    margin-bottom: 20px;
+  }
+
+  .exten {
+    font-size: 24px;
+    margin: 0;
+  }
+
+  .buttons {
+    display: flex;
+    gap: 10px;
+  }
+
+  .button {
+    background-color: white;
+    border: none;
+    padding: 8px 16px;
+    color: #2a2a3e;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  .extensions-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    align-items: center;
+    max-width: 100%;
+    gap: 20px;
+    padding: 0 10%;
+  }
+
+  .extension-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+    max-width: 100%;
+  }
+  .text-content {
+    display: flex;
+    flex-direction: column; /* Stack h5 and p vertically */
+    margin-bottom: 10%;
+  }
+  .markupNotes .text-content {
+    margin-bottom: 4%;
+  }
+  .markPic img {
+    margin-bottom: 23%;
+  }
+  .gridPic img {
+    margin-bottom: 22%;
+  }
+}

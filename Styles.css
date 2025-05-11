@@ -65,20 +65,20 @@ nav {
   margin: 1% 10%;
   padding: 1%;
   border-radius: 20px;
-  display: flex; /* Use Flexbox to align items */
+  display: flex;
   justify-content: space-between;
-  align-items: center; /* Vertically center items */
+  align-items: center;
 }
 .mood {
-  margin-left: auto; /* Push button to the right */
-  font-size: 0.9rem; /* Compact button */
-  padding: 6px 12px; /* Small padding */
-  background-color: hsl(217, 61%, 90%); /* Button background */
-  color: white; /* Moon emoji and text color */
+  margin-left: auto;
+  font-size: 0.9rem;
+  padding: 6px 12px;
+  background-color: hsl(217, 61%, 90%);
+  color: white;
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  flex-shrink: 0; /* Prevent button from shrinking */
+  flex-shrink: 0;
 }
 .mood:hover {
   background-color: #ccc;
@@ -102,24 +102,24 @@ h1 {
 }
 
 .buttons {
-  display: flex; /* Use Flexbox to place buttons in one line */
-  gap: 8px; /* 8px margin between buttons */
-  justify-content: center; /* Center buttons horizontally */
-  flex-wrap: nowrap; /* Prevent buttons from wrapping to the next line */
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: nowrap;
   margin-bottom: 8px;
 }
 .button {
-  font-size: 0.9rem; /* Compact button text */
-  padding: 8px 16px; /* Comfortable padding */
+  font-size: 0.9rem;
+  padding: 8px 16px;
   border: none;
-  background-color: white; /* Blue background for buttons */
+  background-color: white;
   color: black;
   cursor: pointer;
   transition: background-color 0.3s;
   border-radius: 18px;
 }
 .button:hover {
-  border: 1px solid hsl(3, 77%, 44%); /* Darker blue on hover */
+  border: 1px solid hsl(3, 77%, 44%);
   color: white;
 }
 
@@ -149,29 +149,25 @@ h1 {
 }
 .card-content {
   display: flex;
-  align-items: center; /* Align items in a row */
-  gap: 10px; /* Space between image and text */
+  align-items: center;
+  gap: 10px;
   margin: 0;
 }
 .text-content {
   display: flex;
-  flex-direction: column; /* Stack h5 and p vertically */
+  flex-direction: column;
 }
 .card-content img {
   margin-bottom: 18%;
 }
-/*{
-  margin: 0;
-  margin-bottom: 5%;
-  font-size: 1.2em;
-}*/
+
 .text-content h5 {
   font-size: 1.2em;
 }
 
 .text-content p {
-  margin: 0; /* Remove default margins */
-  font-size: 0.9em; /* Adjust size as needed */
+  margin: 0;
+  font-size: 0.9em;
   margin-bottom: 10%;
 }
 @media screen and (min-width: 800px) {
@@ -185,7 +181,7 @@ h1 {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
-    padding: 0 10%; /* Match nav margin for consistency */
+    padding: 0 10%;
     margin-bottom: 20px;
   }
 
@@ -231,7 +227,7 @@ h1 {
   }
   .text-content {
     display: flex;
-    flex-direction: column; /* Stack h5 and p vertically */
+    flex-direction: column;
     margin-bottom: 10%;
   }
   .markupNotes .text-content {
